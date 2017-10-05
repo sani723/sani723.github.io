@@ -1,0 +1,59 @@
+/*
+*---------------------------------
+* overrides
+* --------------------------------
+*/
+
+#nav {
+	top:150px;
+}
+
+#master {
+	height:auto;
+	padding-bottom:10px;
+}
+
+#copyrights {
+	bottom:10px;
+}
+
+/*
+*---------------------------------
+* new layout styles
+* --------------------------------
+*/
+
+.extended {
+	margin:0 auto;
+	padding:220px 0 30px 0;
+	width:800px;
+}
+
+.extended .leftpane {
+	width:240px;
+	float:left;
+	padding:300px 30px 0 0;
+}
+
+.extended .rightpane {
+	width:530px;
+	float:left;
+}
+
+.extended .leftpane a {
+	font-size:12px;
+	color:#968253;
+	font-family:Georgia,"Times New Roman",times;	
+	font-style:italic;
+	text-decoration:none;
+}
+
+.extended .leftpane a:hover,
+.extended .leftpane a.active {
+	color:#d7d7d7;
+}
+
+.extended .leftpane li {
+	padding:0 0 10px 0;
+	text-align:right;
+}

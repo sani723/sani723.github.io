@@ -1,0 +1,7 @@
+.underlay {filter: alpha(opacity=70);}
+#section-nav {filter: alpha(opacity=0);}
+#gallery {filter: alpha(opacity=0);}
+#gallery a.scroll-left, #gallery a.scroll-right {filter: alpha(opacity=60);}
+#gallery a.scroll-left:hover,#gallery a.scroll-right:hover {filter: alpha(opacity=90);}
+.close-zoom,.show-prev,.show-next {filter: alpha(opacity=50);}
+.show-prev,.show-next {opacity:.6;display:none;}

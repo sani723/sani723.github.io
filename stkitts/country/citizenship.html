@@ -1,0 +1,117 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+	<!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title>Welcome to Stkitts - The Country - Citizenship</title>
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<!--<meta name="viewport" content="width=device-width,initial-scale=1">-->
+		<link rel="stylesheet" type="text/css" href="../css/style.css">
+		<link rel="stylesheet" type="text/css" href="../css/main.css">
+		<link rel="stylesheet" type="text/css" href="../css/extended.css">
+		<!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="../css/filter.css"><![endif]-->		
+		<link rel="stylesheet" type="text/css" href="../css/jScrollPane.css">
+		<script type="text/javascript" src="../js/libs/modernizr-2.0.6.min.js"></script>
+
+	</head>
+
+	<body>
+		
+		<div id="slideshow">
+			<img class="bg" src="../img/slideshow/02.jpg" alt="" />
+		</div>
+		<div id="bgoverlay"></div>
+		
+		<div id="master">
+			<a id="logo" href="#"><img src="../img/generic/logo-stkitts.png" alt="" /></a>
+			<div class="extended clearfix">
+				<div class="leftpane">
+					<ul>
+						<li><a href="#">Exit Strategy</a></li>
+						<li><a href="#">Application Process</a></li>
+						<li><a href="#">SIDF</a></li>
+						<li><a href="#">FAQs</a></li>
+					</ul>
+				</div>
+				<div class="rightpane">
+					<h1>Citizenship by Investment</h1>	
+					<p>Established in 1984, the "St Kitts and Nevis Citizenship by Investment Program" is the oldest and the most respected Economic Citizenship program of it's kind. It allows individuals to acquire the citizenship of the country by investing in a number of government approved, real estate projects. The program allows dual citizenship and is strictly governed by state laws and regulations.</p>
+					<p>Citizenship of St. Kitts &amp; Nevis can be obtained in two ways - through the purchase of Real Estate or a financial contribution to the Sugar Industry Diversification Foundation (SIDF).</p>
+					<h2>1. Citizenship of St Kitts through investment in Real Estate</h2>
+					<p>This requires an Investment of at least $400,000 in a property approved by the government. The overall investment including application and government fees (for a family of 4) will be as follows;</p>
+					<p>An investment in Range Developments' "Park Hyatt St Kitts" project entitles the investor to:</p>
+					<ul class="simple">
+						<li>An investment share in a 5 star branded hotel</li>
+						<li>Annual income yield from the outset</li>
+						<li>Benefits associated with Citizenship of St Kitts</li>
+						<li>Security with an international developer and globally recognized brand</li>
+						<li>Enrolment in the hotel operator’s highest tier loyalty program which offers access to preferred clubs and preferential rates at hotels around the world</li>
+					</ul>
+					<h2>2. A contribution to the SIDF (Sugar Industry Diversification Fund)</h2>
+					<p>The relevant contribution must be paid into the SIDF Escrow Account which is opened and operated under the supervision of the Ministry of Finance of the Federation. Copy of the confirmation, that the contribution was paid into the SIDFEscrow Account must be provided at the time the application is submitted to the Government of the St Kitts and Nevis.</p>
+				</div>
+				
+			</div>
+			<div id="copyrights">
+				COPYRIGHT &copy; ST. KITTS 2012
+			</div>			
+			
+			
+			<div id="nav">
+				<div class="underlay"></div>
+				<nav class="clearfix">
+					<ul>
+						<li><a href="../#home">HOME</a></li>
+						<li><a href="#">ABOUT US</a></li>
+						<li><a  class="active" href="#">THE COUNTRY</a></li>
+						<li><a href="../resort/">THE RESORT</a></li>
+						<li><a href="#">PARTNERS</a></li>
+						<li><a href="../gallery/">GALLERY</a></li>
+						<li><a href="#">DOWNLOADS</a></li>
+						<li><a href="#">MEDIA CENTER</a></li>
+						<li><a href="#">FAQS</a></li>
+					</ul>
+				</nav>
+			</div>
+			
+
+			<div id="music"></div>
+		</div>
+		
+		<a class="close-zoom" href="#"><img src="../img/button/close-shadow.png" alt="" /></a>
+		
+		
+		<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+		<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->
+		<script>window.jQuery || document.write('<script src="../js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+		<script type="text/javascript" src="../js/plugins.js"></script>
+		<script type="text/javascript" src="../js/script.js"></script>
+		<script type="text/javascript" src="../js/mylibs/swfobject.js"></script>			
+		<script type="text/javascript">
+		$.preload(["../img/slideshow/02.jpg"], {
+			init: function(loaded, total) {
+				$("#logo").fadeIn({duration:800,easing:"easeInQuad"});
+				$("body").append(STK.tmplPreloader);
+			},
+			//loaded: function(img, loaded, total) {},
+			loaded_all: function(loaded, total) {
+				$("#preloader").fadeOut({duration:200,complete:function(){STK.loadSection(.8);}}).remove();
+			}
+		});	
+		$("#content .scroll-text").jScrollPane({verticalDragMaxHeight:20,verticalDragMaxHeight:20});			
+		</script>
+		<!-- Change UA-XXXXX-X to be your site's ID -->
+		<script type="text/javascript">
+			//window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
+			//Modernizr.load({load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'});
+		</script>
+	
+		
+		
+	</body>
+</html>

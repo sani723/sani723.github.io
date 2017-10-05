@@ -1,0 +1,116 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+	<!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title>Welcome to Stkitts</title>
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<!--<meta name="viewport" content="width=device-width,initial-scale=1">-->
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="css/filter.css"><![endif]-->
+		<link rel="stylesheet" type="text/css" href="css/prettyPhoto.css">		
+		<script type="text/javascript" src="js/libs/modernizr-2.0.6.min.js"></script>
+	</head>
+
+	<body>
+		
+		<div id="slideshow">
+			<img class="bg" src="img/slideshow/01.jpg" alt="" />
+			<img class="bg" src="img/slideshow/02.jpg" alt="" />
+			<img class="bg" src="img/slideshow/03.jpg" alt="" />
+			<img class="bg" src="img/slideshow/04.jpg" alt="" />
+		</div>
+		<div id="bgoverlay"></div>
+		<div id="slidecaps">
+			<h1>A country blessed with incredible natural beauty</h1>
+			<h1>A rewarding investment opportunity</h1>
+			<h1>The best developers, architects and designers</h1>
+			<h1>Brought together by a grand vision</h1>
+		</div>		
+		
+		<div id="master">
+			<a id="logo" href="#"><img src="img/generic/logo-stkitts.png" alt="" /></a>
+			
+			<div id="home-content">
+				<div class="underlay"></div>	
+				<div id="intro">
+					<div class="copy">
+						<h1>PARK HYATT ST. KITTS</h1>
+						<p>Range Developments presents a lifestyle investment opportunity of a lifetime - the Park Hyatt St. Kitts. This ultra-luxury 5 star resort, located on the exotic Caribbean Island of St. Kitts, promises a life adorned with enchanting beauty and exclusive luxury amenities.</p>
+						<p>You can be a proud owner of a share in this prestigious development and also acquire the citizenship of St. Kitts & Nevis.</p>
+					</div>
+					<a href="http://vimeo.com/7874398&width=700" rel="prettyPhoto" class="video"><img src="img/content/watch-video.jpg" alt="" /></a>
+				</div>	
+			</div>
+			
+			<div id="nav">
+				<div class="underlay"></div>
+				<nav class="clearfix">
+					<ul>
+						<li><a href="index.html" class="active">HOME</a></li>
+						<li><a href="#">ABOUT US</a></li>
+						<li><a href="country/">THE COUNTRY</a></li>
+						<li><a href="resort/">THE RESORT</a></li>
+						<li><a href="#">PARTNERS</a></li>
+						<li><a href="gallery/">GALLERY</a></li>
+						<li><a href="#">DOWNLOADS</a></li>
+						<li><a href="#">MEDIA CENTER</a></li>
+						<li><a href="#">FAQS</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div id="copyrights">
+				COPYRIGHT &copy; ST. KITTS 2012
+				<select class="lang">
+					<option value="en">English</option>
+					<option value="ru">Russian</option>
+				</select>
+			</div>			
+			<div id="music"></div>
+		</div>
+			
+		
+		
+		<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+		<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->
+		<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+		<script type="text/javascript" src="js/plugins.js"></script>
+		<script type="text/javascript" src="js/mylibs/jquery.prettyPhoto.js"></script>
+		<script type="text/javascript" src="js/mylibs/swfobject.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+		<script type="text/javascript">
+		$.preload(["img/slideshow/01.jpg","img/slideshow/02.jpg","img/slideshow/03.jpg","img/slideshow/04.jpg"], {
+			init: function(loaded, total) {
+				$("#logo").fadeIn({duration:800,easing:"easeInQuad"});
+				$("body").append(STK.tmplPreloader);
+			},
+			//loaded: function(img, loaded, total) {},
+			loaded_all: function(loaded, total) {
+				if(location.hash == "#home"){
+					$("#preloader").fadeOut({duration:200,complete:function(){
+							$("#bgoverlay").fadeOut(300);
+							$(".bg").eq(total-1).css({display:"block"});
+							$("#logo,#nav,#home-content").fadeIn(500);							
+					}}).remove();
+				}
+				else {
+					$("#preloader").fadeOut({duration:200,complete:function(){STK.intro();}}).remove();
+			}
+			}
+		});		
+		$("a[rel^='prettyPhoto']").prettyPhoto({theme:'dark_rounded',deeplinking:false});
+		</script>
+		<!-- Change UA-XXXXX-X to be your site's ID -->
+		<script type="text/javascript">
+			//window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
+			//Modernizr.load({load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'});
+		</script>
+		
+	</body>
+</html>
