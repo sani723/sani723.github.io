@@ -1,0 +1,50 @@
+.wrapper-section-nav {
+    background:$brandGold;
+    text-align:center;
+    height:60px;
+    overflow:hidden;
+    margin-bottom: 1rem;
+    .section-nav {
+        font-size:0;
+        display:inline-block;
+        overflow-x:scroll;
+        width:100%;
+
+        .nav {
+            white-space:nowrap;
+            width:auto;
+        }
+
+        .nav-item {
+            border-left:1px solid #fff;
+            display:inline-block;
+
+            a {
+                color:#fff;
+                text-transform:uppercase;
+                font-size:1.5rem;
+                width:130px;
+                height:60px;
+                padding:0 5px;
+                display:block;
+                white-space:normal;
+
+                span {
+                    line-height:1.2;
+                }
+            }
+
+            &:first-child {
+                border-left:0;
+            }
+
+            &:hover {
+                background:$blueGray;
+            }
+
+            &.active {
+                background:$blueGray;
+            }
+        }
+    }
+}

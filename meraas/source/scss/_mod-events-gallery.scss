@@ -1,0 +1,15 @@
+.event-banner{
+	margin-top: 3.4rem;
+	img{
+		width: 100%;
+	}
+	p{
+		margin-top: 8px;
+	}
+}
+@media screen and (max-width:$max-960) {
+    .event-banner {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}

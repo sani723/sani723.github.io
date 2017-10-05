@@ -1,0 +1,75 @@
+extends ../layout/home
+append config
+    - var Page = {title:"Events gallery",section:"home",theme:""}
+    - var Meta = {description:"Media centre",keywords:""}
+block content
+    .wrapper-content
+        .content
+            // Start .wrapper-hero
+            .wrapper-hero
+                .page-hero
+                    img.backdrop(src="../img/content/hero-media-news-landing-01.jpg", alt="")
+                    .intro
+                        h1 Media centre
+                        p Meraas was established to make a positive contribution to the National economy. By creating a portfolio of investments in various industry sectors, we seek to generate long term wealth enhancement to the economic and social development of Dubai.
+            // End .wrapper-hero
+
+            // Start .wrapper-section-nav
+            .wrapper-section-nav
+                nav.section-nav
+                    ul.nav
+                        li.nav-item: a.middle-items(href="#"): span news
+                        li.nav-item: a.middle-items(href="#"): span calendar
+                        li.nav-item.active: a.middle-items(href="#"): span  gallery
+            // End .wrapper-section-nav
+
+            // Start .wrapper-mod for Media events module
+            .wrapper-mod
+                .mod-content
+                    h2 Events gallery
+                    .event-banner
+                        p.header-title Latest events
+                        img(src="../img/content/banner-events.jpg", alt="latest event banner")
+                        p Event name loren ipsum
+                    ul.square-pod-list
+                        li.pod-item
+                            img.thumb(src="../img/content/events-01.jpg", alt="events")
+                            p loren ipsum color
+                        li.pod-item
+                            img.thumb(src="../img/content/events-02.jpg", alt="events")
+                            p loren ipsum color
+                        li.pod-item
+                            img.thumb(src="../img/content/events-03.jpg", alt="events")
+                            p loren ipsum color
+                        li.pod-item
+                            img.thumb(src="../img/content/events-04.jpg", alt="events")
+                            p loren ipsum color
+                        li.pod-item
+                            img.thumb(src="../img/content/events-05.jpg", alt="events")
+                            p loren ipsum color
+                        li.pod-item
+                            img.thumb(src="../img/content/events-06.jpg", alt="events")
+                            p loren ipsum color
+                        li.pod-item
+                            img.thumb(src="../img/content/events-07.jpg", alt="events")
+                            p loren ipsum color
+                        li.pod-item
+                            img.thumb(src="../img/content/events-08.jpg", alt="events")
+                            p loren ipsum color
+                        li.pod-item
+                            img.thumb(src="../img/content/events-09.jpg", alt="events")
+                            p loren ipsum color
+                        li.pod-item
+                            img.thumb(src="../img/content/events-10.jpg", alt="events")
+                            p loren ipsum color
+                        li.pod-item
+                            img.thumb(src="../img/content/events-11.jpg", alt="events")
+                            p loren ipsum color
+                        li.pod-item
+                            img.thumb(src="../img/content/events-12.jpg", alt="events")
+                            p loren ipsum color
+                    section.pagination
+                            a.more.small(href="#")
+                                span view more
+                                span.icon
+            //End .wrapper-mod for Media events module

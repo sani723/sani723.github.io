@@ -1,0 +1,39 @@
+extends ../layout/home
+append config
+    - var Page = {title:"Welcome",section:"home",theme:""}
+    - var Meta = {description:"Welcome",keywords:""}
+block content
+    .wrapper-content
+        .content
+            // Start .wrapper-hero
+            .wrapper-hero
+                .page-hero
+                    img.backdrop(src="../img/content/hero-home-01.jpg", alt="")
+                    .intro
+                        h1 Contact us
+                        p Meraas was established to make a positive contribution to the National economy. By creating a portfolio of investments in various industry sectors, we seek to generate long term wealth enhancement to the economic and social development of Dubai.
+            // End .wrapper-hero
+
+            // Start .wrapper-mod for section intro module
+            .wrapper-mod.full-width
+                .mod-content
+                    .col-details
+                        h3 News &amp; media from Meraas
+                    .col-sidebar
+                        section.aside-pod-item
+                            h3 Meraas holding
+                            p
+                                | Emaar Square <br/>Building 1, Level 3 &amp; 5 <br/>P.O.BOX 123311<br/>Dubai, United Arab Emirate
+
+                            a(href="#", class="pod-link") Location map
+                                            span.icon-arrow-right
+                            .info-item-block
+                                p.title General Enquiries
+                                ul
+                                    li
+                                        span.icon-call-phone
+                                        span Within UAE 800 Meraas (<a href="tel:637227">637227</a>)
+                                    li
+                                        span.icon-email
+                                        a(href="mailto:customerservice@meraa.ae") customerservice@meraas.ae
+            // End .wrapper-mod for section intro module

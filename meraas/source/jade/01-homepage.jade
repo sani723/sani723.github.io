@@ -1,0 +1,78 @@
+extends ../layout/home
+append config
+    - var Page = {title:"Welcome",section:"home",theme:""}
+    - var Meta = {description:"Welcome",keywords:""}
+block content
+    .wrapper-content
+        .content
+            // Start .wrapper-hero
+            .wrapper-hero
+                .page-hero
+                    img.backdrop(src="../img/content/hero-home-01.jpg", alt="")
+                    .intro
+                        h1 Redefining Industries
+                        p Meraas was established to make a positive contribution to the National economy. By creating a portfolio of investments in various industry sectors, we seek to generate long term wealth enhancement to the economic and social development of Dubai.
+                        .scroll-down
+                            a(href="#")
+            // End .wrapper-hero
+
+            // Start .wrapper-mod for feature projects
+            .wrapper-mod.full-width
+                .mod-content
+                    .mod-featured-projects
+
+                        .backdrops
+                            .list
+                                .item: img(src="../img/content/home-featured-01.jpg",alt="")
+                                .item: img(src="../img/content/home-featured-01.jpg",alt="")
+
+                        .summaries
+                            .list
+                                .item
+                                    h3.title blue waters island
+                                    h4.sub-title Launching in 2016
+                                    .summary
+                                        p Located off the Jumeirah Beach Residence coastline, ‘Bluewaters’ will feature demarcated retail, residential, hospitality and entertainment zones. Bluewaters’ will feature a bespoke ‘souq’ encircled by a promenade that will boast alfresco dining outlets serving a wide variety of cuisine.
+                                    .links-list.arrow
+                                        a.link(href="#"): span photo gallery
+                                        a.link(href="#"): span watch video
+                                        a.link(href="#"): span chairman message
+
+                                    a.more
+                                        span learn more about
+                                        span.icon
+                                .item
+                                    h3.title blue waters island
+                                    h4.sub-title Launching in 2016
+                                    .summary
+                                        p Located off the Jumeirah Beach Residence coastline, ‘Bluewaters’ will feature demarcated retail, residential, hospitality and entertainment zones. Bluewaters’ will feature a bespoke ‘souq’ encircled by a promenade that will boast alfresco dining outlets serving a wide variety of cuisine.
+                                    .links-list.arrow
+                                        a.link(href="#"): span photo gallery
+                                        a.link(href="#"): span watch video
+                                        a.link(href="#"): span chairman message
+
+                                    a.more
+                                        span learn more about
+                                        span.icon
+            // End .wrapper-mod for featured projects
+
+            // Start .wrapper-mod for our brands carousel
+            .wrapper-mod.full-width
+                .mod-content
+                    .mod-brands-carousel
+                        h2.middle-items: span our brands
+
+                        .brands-list
+                            .item
+                                img(src="../img/content/brand-carousel-01.jpg",alt="")
+                            .item
+                                img(src="../img/content/brand-carousel-02.jpg",alt="")
+                            .item
+                                img(src="../img/content/brand-carousel-03.jpg",alt="")
+                            .item
+                                img(src="../img/content/brand-carousel-01.jpg",alt="")
+                            .item
+                                img(src="../img/content/brand-carousel-02.jpg",alt="")
+                            .item
+                                img(src="../img/content/brand-carousel-03.jpg",alt="")
+            // End .wrapper-mod for our brands carousel

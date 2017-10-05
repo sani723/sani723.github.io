@@ -1,0 +1,62 @@
+.square-pod-list {
+    font-size: 0;
+    margin: 0 auto;
+    text-align: center;
+
+    .pod-item {
+        display: inline-block;
+        width: 22.95918%;
+        margin-left: 2.6910%;
+        @include box-sizing(border-box);
+        margin-top: 3rem;
+        text-align: left;
+        vertical-align: top;
+        &:first-child,
+        &:nth-child(4n+1){
+            margin-left: 0;
+        }
+        img{
+            width: 100%;
+        }
+        p {
+            font-family: $blissLight;
+            line-height: 1.2;
+            margin-top: 8px;
+        }
+        .name{
+            font-size: 1.8rem;
+            text-transform: uppercase;
+        }
+        .title{
+            font-size: 1.4rem;
+            text-transform: capitalize;
+            margin-top: 3px;
+        }
+    }
+    &:only-child{
+        margin-top: -3rem;
+    }
+}
+@media screen and (max-width:$max-960) {
+    .square-pod-list {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media screen and (max-width:$max-600) {
+
+    .square-pod-list {
+        .pod-item {
+            width: 48.1%;
+            margin-left: 3.4125%;
+            &:nth-child(2n+1){
+                margin-left: 0;
+            }
+
+            .name{
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
