@@ -1,0 +1,45 @@
+			<!-- Start - forms lightbox template -->
+			<div class="lightbox">
+        		<div class="form-window">
+        			<form class="form" name="loginForm" novalidate ng-submit="loginUser()">
+        				<h3 class="title"> دخول </h3>
+        				
+        				<fieldset class="form-fields">
+        					
+	        				<fieldset class="row">
+	        					<fieldset class="label"> <label for="email"> البريد الإلكتروني </label> </fieldset>
+	        					<fieldset class="field">
+	        						<input ng-model="user.email" name="email" type="email" class="txt email" required />
+	        					</fieldset>
+	        					<span ng-show="loginForm.email.$dirty && loginForm.email.$error.required" class="help-block"> يرجى إدخال كلمة المرور </span>
+	        					<span ng-show="loginForm.email.$dirty && loginForm.email.$error.email" class="help-block"> من فضلك ادخل بريد الكتروني صحيح </span>
+	        				</fieldset>
+	        				
+	        				<fieldset class="row">
+	        					<fieldset class="label"> <label> كلمة السر </label> </fieldset>
+	        					<fieldset class="field"><input ng-model="user.pass" name="pass" type="password" class="txt" required /></fieldset>
+	        					<span ng-show="loginForm.pass.$dirty && loginForm.pass.$error.required" class="help-block"> يرجى إدخال كلمة المرور </span>
+	        				</fieldset>	  
+	        					        					  
+	        				<fieldset class="row">
+	        					<fieldset class="submit"><input ng-disabled="loginForm.$invalid" type="submit" class="btn-submit" value=" تسجيل " /></fieldset>
+	        				</fieldset>	
+	        				
+	        				<fieldset class="row">
+	        					<p> هل نسيت الإسم أو كلمة السر  ؟ <a href="#/forgetPassword"> إضغط هنا </a> </p>
+	        				</fieldset>	        					        				
+
+	        				<fieldset class="row">
+	        					<p> ليس لديك حساب ؟ <a href="#"> ليس لديك حساب ؟ </a> </p>
+	        				</fieldset>	
+
+	        				<fieldset class="row">
+	        					<p> للتسجيل <a href="#/register"> إضغط هنا </a> </p>
+	        				</fieldset>		        				
+	        				
+        				</fieldset>
+        			</form>
+        			<a class="btn-close" href="#"><img src="../img/generic/form-btn-close.png" alt="" /></a>
+        		</div>
+        	</div>		
+			<!-- End - forms lightbox template -->

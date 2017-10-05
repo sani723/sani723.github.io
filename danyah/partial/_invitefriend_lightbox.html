@@ -1,0 +1,27 @@
+			<!-- Start - forms lightbox template -->
+			<div class="lightbox">
+        		<div class="form-window">
+        			<form class="form" name="loginForm" novalidate ng-submit="inviteFriend()">
+        				<h3 class="title"> دخول </h3>
+        				
+        				<fieldset class="form-fields">
+        					
+	        				<fieldset class="row">
+	        					<fieldset class="label"> <label for="email"> البريد الإلكتروني </label> </fieldset>
+	        					<fieldset class="field">
+	        						<input ng-model="user.email" name="email" type="email" class="txt email" required />
+	        					</fieldset>
+	        					<span ng-show="loginForm.email.$dirty && loginForm.email.$error.required" class="help-block"> يرجى إدخال كلمة المرور </span>
+	        					<span ng-show="loginForm.email.$dirty && loginForm.email.$error.email" class="help-block"> من فضلك ادخل بريد الكتروني صحيح </span>
+	        				</fieldset>
+	        				<fieldset class="row">
+	        					<fieldset class="submit"><input ng-disabled="loginForm.$invalid" type="submit" class="btn-submit" value=" تسجيل " /></fieldset>
+	        				</fieldset>	
+	        					        				
+	        				
+        				</fieldset>
+        			</form>
+        			<a class="btn-close" href="#"><img src="../img/generic/form-btn-close.png" alt="" /></a>
+        		</div>
+        	</div>		
+			<!-- End - forms lightbox template -->

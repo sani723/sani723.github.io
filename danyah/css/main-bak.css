@@ -1,0 +1,313 @@
+/*
+ Custom Fonts
+ * */
+
+
+@font-face {
+	font-family: 'brushScript';
+	src: url('../fonts/BrushScriptStd.eot');
+	src: local('☺'), 
+		 url('../fonts/BrushScriptStd.woff') format('woff'), 
+		 url('../fonts/BrushScriptStd.ttf') format('truetype'), 
+		 url('../fonts/BrushScriptStd.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+/** ---BASE---
+ * 1-Set default font size to 16px.
+ * 2-(a)setting font-size to be 62.5% of 16px is 10px, easy calculations for em*/
+html { font-size:16px; }
+body { font:62.5%/1.4 Arial, Helvetica, sans-serif; }
+
+
+html, body {
+	width:100%;
+	height:100%;
+}
+
+body {
+	background:#f8d1dd url('../img/bg/page-tile-flowers.jpg') repeat 0 0;
+}
+
+
+/*
+ layout styles
+ * */
+.master {
+	width:100%;
+	height:100%;
+	min-width:1200px;
+	min-height:768px;
+	position:relative;
+	overflow:hidden;
+}
+
+.parallax-bg,
+.parallax-bg .layer {
+	width:100%;
+	height:100%;
+}
+
+.parallax-bg .layer img {
+	position:absolute;
+	left:50%;
+	bottom:-200px;
+	margin-left:-1507px;
+}
+
+.hearts-bg, .stage-bg {
+	width:100%;
+	height:100%;
+	position:absolute;
+	left:0;
+	bottom:0;
+}
+
+.logo-bg {
+	width:100%;
+	max-width:1200px;
+	height:100%;
+	position:absolute;
+	left:50%;
+	bottom:0;
+	margin-left:-600px;
+}
+
+.logo-bg .flower {
+	position:absolute;
+	left:30px;
+	bottom:270px;
+}
+
+.hearts-bg {
+	background:transparent url('../img/bg/home-hearts.png') no-repeat center bottom;
+}
+
+.stage-bg {
+	background:transparent url('../img/bg/home.gif') no-repeat center bottom;
+}
+
+.inner {
+	width:100%;
+	max-width:1200px;
+	height:100%;
+	position:absolute;
+	left:50%;
+	bottom:0;
+	margin-left:-600px;
+	overflow:hidden;
+	position:relative;
+}
+
+.logo {
+	position:absolute;
+	left:100px;
+	bottom:400px;
+}
+
+.family {
+	width:507px;
+	height:478px;
+	position:absolute;
+	bottom:160px;
+	left:420px;
+	background: url(../img/bg/family-elipse.png) no-repeat center bottom;
+}
+
+.family img,
+.family a {
+	position:absolute;
+	bottom:20px;
+}
+
+.home .family a img {
+	bottom:0;
+}
+
+.home .family .danyah {
+	left:20px;
+	bottom:18px;
+}
+
+.home .family .father {
+	left:67px;
+}
+
+.home .family .mother {
+	left:235px;
+}
+
+.home .family .azuz {
+	left:240px;
+	bottom:18px;
+}
+
+
+/*
+ danyah
+ * */
+
+.danyah .family {
+	background:none;
+}
+
+.danyah.home {
+	background-image:url('../img/bg/danyah-home.gif');
+}
+
+.danyah.home .hearts-bg {
+	background-image:url('../img/bg/danyah-home-hearts.gif');
+}
+
+.danyah.home .logo {
+	bottom:325px;
+}
+
+.danyah.home .family .danyah {
+	bottom:0;
+}
+
+.danyah.media {
+	background-image:url('../img/bg/page.gif');
+}
+
+.danyah.media .hearts-bg {
+	background-image:url('../img/bg/danyah-media-hearts.gif');
+}
+
+.danyah.media .stage-bg {
+	background-image:url('../img/bg/danyah-media.gif');
+}
+
+.danyah.media .logo {
+	bottom:510px;
+	left:10px;
+}
+
+.danyah.media .family {
+	width:auto;
+	height:auto;
+	position:absolute;
+	bottom:160px;
+	left:85px;
+	background: url('../img/bg/family-elipse.png') no-repeat center bottom;
+}
+
+.danyah.media .screen {
+	background:url('../img/bg/screen.png') no-repeat center bottom;
+	width:666px;
+	height:557px;
+	position:absolute;
+	left:275px;
+	bottom:190px;
+	
+}
+
+.danyah.media .screen .player {
+	position:absolute;
+	top:70px;
+	left:32px;
+}
+
+/*
+ .login-status-box styles
+ * */
+.danyah .login-status-box {
+	background:transparent url('../img/bg/login-status-box.png') no-repeat top left;
+	width:136px;
+	height:176px;
+	position:absolute;
+	bottom:550px;
+	right:90px;
+}
+
+.danyah .login-status-box .user-pic {
+	margin-left:32px;
+	margin-top:7px;
+}
+
+.danyah .login-status-box .user-pic img {
+	border-radius:12px;
+}
+
+.danyah .login-status-box .user-name {
+	color:#fff;
+	font-family:'brushScript',arial, helvetica,sans-serif;
+	font-size:25px;
+	line-height:1.2;
+	background:#cc3399;
+	width:97px;
+	border-radius:12px;
+	text-align:center;
+	margin-left:25px;
+	border:6px solid #fff;
+}
+
+
+/*
+ .main-nav styles
+ * */
+	
+.main-nav {
+	width:100%;
+	height:250px;
+	position:absolute;
+	bottom:0;
+}
+
+.main-nav a {
+	float:left;
+	margin:0;
+	padding:0;
+	background:#CC3399;
+}
+
+.main-nav a img {
+	width:60%;
+	background:#ccc;
+}
+
+.main-nav .store {}
+
+.main-nav .game {}
+
+.main-nav .chat {}
+
+.main-nav .media {}
+
+.main-nav .video {}
+
+.main-nav .audio {}
+
+
+
+
+/*
+ .footer styles
+ * */
+.footer {
+	width:100%;
+	height:300px;
+	background:transparent url('../img/bg/footer.png') no-repeat center top;
+	position:absolute;
+	left:0;
+	bottom:-170px;
+	text-align:center;
+}
+
+@media screen and (max-width:1200px) {
+	
+	.home .logo-bg,
+	.home .inner {	
+		left:0;
+		margin-left:0;
+	}
+	
+	
+}
+
+
+
+

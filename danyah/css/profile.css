@@ -1,0 +1,284 @@
+/**************************************
+USER PROFILE DETAIL - LEFT SIDE BAR
+**************************************/
+
+.user-profile-score-wrapper {
+	width: 344px;
+	height: 630px;
+	color: #fff;
+	bottom: -25px;
+	position: relative;
+	text-transform: uppercase;
+	font-family:'aiAgenda',tahoma;
+	background:url('../img/bg/user-profile-score.png') no-repeat 0 0;
+}
+.score-wrapper {
+	height: 446px;
+	width: 290px;
+	bottom: 0;
+	position: absolute;
+}
+.user-profile .score {
+	font-family:'LithosProBlack',verdana;
+	width: 258px;
+	height: 286px;
+	background-color: #f08fc1;
+	border-radius: 5px;
+	position: absolute;
+	bottom: 47px;
+	left: 22px;
+}
+.profile-pricture-wrapper {
+	top: 0;
+	left: 33px;
+	padding: 8px;
+	width: 203px;
+	height: 216px;
+	position: absolute;
+}
+.user-profile .pbox {
+    width:229px;
+    height:242px;
+    position:absolute;
+    top:7px;
+	left: 33px;
+	overflow:hidden;
+	background:url('../img/bg/settings-thumb.jpg')no-repeat 35px 12px;
+}
+.user-profile .pbox .frame {
+   position:absolute;
+   top:0;
+   left:0;
+}
+.user-profile .pbox .thumb {
+	width:210px;
+	height:210px;
+	margin-top:10px;
+	margin-left:12px;
+	overflow:hidden;
+	border-radius:15px;   
+}
+.user-profile .pbox .thumb img {
+	height:100%;	
+}
+.user-name {
+	bottom: 26px;
+	left: 0;
+	width: 97%;
+	z-index: 9999;
+	font-size: 28px;
+	text-align: center;
+	position: absolute;	
+}
+/*******************************************
+PHOTOS DRAWING CONTAINER
+*******************************************/
+.photos-drawing-container {
+	left: 367px;
+	width: 749px;
+	height: 627px;
+	position: absolute;
+	bottom:-25px;
+}
+.friends-wrapper {
+	float: left;
+	width: 749px;
+	height: 203px;
+	position: relative;
+}
+.profile-slider-wrapper {
+	float: left;
+	width: 735px;
+	height: 410px;
+	padding: 7px;
+	position: relative;
+	background: transparent url('../img/bg/photos-drawing-dashboard-bg.png') no-repeat 0 0;
+}
+/********************************************
+SETTINGS
+*********************************************/
+.user-profile-settings {
+	position: absolute;
+	left: 15px;
+	bottom: 337px;
+	width: 257px;
+}
+.user-profile-settings a {
+	color: #b74ca1;
+	font-size: 30px;
+	font-weight: bold;
+	text-decoration: none;
+	padding-left: 20px;
+	width: 236px;
+	margin-left:10px;
+	float: left;
+	z-index: 5;
+	font-family:'LithosProBlack',tahoma,helvetica;
+	background: transparent url('../img/bg/link-settings-bg.png') no-repeat 0 0;
+	text-shadow:3px 3px 0 #eebdd6;
+}
+.user-profile .user-score {
+	text-shadow:4px 4px #b74ca1;
+	font-size: 38px;
+	padding:16px 0 0 16px;
+	line-height: 35px;
+}
+.user-score:after {
+	content: ":";
+}
+.user-profile .scores {
+	bottom: 15px;
+	left: 75px;
+	font-size: 38px;
+	position: absolute;
+}
+
+.user-profile .scores li span {
+	text-shadow:-3px 3px 0 #f8c7e0;	
+	color:#b74ca1;	
+}
+
+
+/**********************************************
+FRIENDS
+**********************************************/
+.friends-list {
+	right: 0;
+	position: absolute;
+}
+.friends-list li {
+	width: 109px;
+	height: 154px;
+	margin-right: 8px;
+	position: relative;
+	display: inline-block;	
+	background: transparent url('../img/bg/friends-bg.png') no-repeat 0 0;
+}
+.friends-list li:last-child {
+	margin: 0;
+}
+.friends-meta {
+    color:#b74ca1;
+    font-family:'LithosProBlack',verdana;
+	top: 10px;
+	left: 10px;
+	position: absolute;
+}
+
+.friends-meta a {
+    color:#b74ca1;
+    text-decoration:none;
+    font-family:'LithosProBlack',verdana;
+}
+.friends-list li img {	
+	border-radius: 4px;
+}
+.friends-list li span {
+	top: 123px;
+	width: 86px;
+	height: 15px;
+	font-weight: bold;
+	color: #b74ca1;
+	font-size: 15px;
+	text-align: center;
+}
+.friends-wrapper h4 {
+	font-family:'LithosProBlack',verdana;
+	line-height: 30px;
+	font-size: 32px;
+	color: #b74ca1;
+	top: 5px;
+	left: 0;
+	text-transform: uppercase;
+	text-shadow:3px 3px 0 #fff;
+}
+.slider {
+	color: #b74ca1;
+	width: 735px;
+	height: 188px;
+	position: relative;
+}
+.drawing {
+	
+}
+.user-profile .meta {
+	font-family:'LithosProBlack',verdana;
+	float: left;
+	width: 194px;
+	height: 128px;
+	font-size: 35px;
+	padding: 60px 15px 0 15px;
+	text-transform:uppercase;
+	text-shadow:2px 3px 0 #eebdd6;
+}
+.slider-wrapper {
+	float: left;
+	width: 496px;
+	height: 139px;
+	margin-top: 14px;
+	position: relative;
+}
+.user-profile .slider-content {
+	left: 48px;
+	width: 402px;
+	height: 139px;
+	position: absolute;
+}
+.icons {
+	top: 45px;
+	position: absolute;	
+}
+.next,.dnext {
+	right: 0;
+}
+.content {
+	height: 139px;
+	position: absolute;
+}
+.user-profile .photo {
+	float: left;
+	width: 123px;
+	height: 139px;
+	position: relative;
+	margin:0 8px;
+	background: transparent url('../img/bg/photo-drawing-bg.png') no-repeat 0 0;
+}
+.photo img {
+	top: 9px;
+	left: 9px;
+	position: absolute;
+}
+.photo span {
+	left: 5px;
+	color: #fff;
+	width: 113px;
+	height: 22px;
+	bottom: 9px;
+	padding-top: 5px;
+	position: absolute;
+	text-align: center;
+	font: bold 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.owl-pagination {
+	width: 384px;
+	height: 5px;
+	margin-top:20px;
+	margin-left:12px;
+	text-align: center;
+	background:url('../img/bg/pagination-bg.png') no-repeat center 0;
+}
+
+.owl-pagination .owl-page {
+	width: 15px;
+	height: 15px;
+	margin: -5px 15px 0 0;
+	display: inline-block;
+	background: transparent url('../img/bg/page-number.png') no-repeat 0 0;
+}
+.owl-pagination .owl-page.active{
+	background-position: 0 -15px;
+}
+.main-nav .audio, .main-nav .video {
+	display: none;
+}
+

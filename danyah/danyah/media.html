@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>Welcome to Danyah Website</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=1400">
+        
+        <!-- HandheldFriendly, MobileOptimized, viewport meta is required for responsive & mobile templates -->
+        <!-- 
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+        -->
+        <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+		
+		<!-- build:js css/all.css -->
+        <link rel="stylesheet" href="../css/normalize_custom.css">
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../css/media.css">
+		<!-- endbuild -->
+		<!-- build:js js/modernizr-2.6.2.min.js -->
+        <script src="../js/vendor/modernizr-2.6.2.min.js"></script>
+		<script src="../js/vendor/angular-file-upload-shim.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>        
+		<!-- endbuild -->
+    </head>
+    <body class="danyah-page media">
+
+        <div class="master" ng-app="DanyahApp">
+        	<!-- Start - .parallax-bg -->
+			<div class="parallax-bg">
+				<div class="layer purple-ellipse" data-depth="0.6"><img src="../img/bg/purple-ellipse-layer.png" alt="" /></div>
+				<div class="layer home-hearts" data-depth="0.8"><img src="../img/bg/rainbow-layer.png" alt="" /></div>
+				<div class="layer home-hearts" data-depth="0.4"><img src="../img/bg/danyah-media-hearts-layer.png" alt="" /></div>
+				<div class="layer hills" data-depth="0.6"><img src="../img/bg/hills-layer.png" alt="" /></div>
+				<div class="layer hills-leaves" data-depth="0.4"><img src="../img/bg/hills-leaves-layer.png" alt="" /></div>
+				<div class="layer " data-depth="0.2"><img src="../img/bg/home-ground.png" alt="" /></div>
+			</div>
+			<!-- End - parallax-bg -->
+			
+			<!-- Start - .inner -->
+        	<div class="inner" ng-controller="MediaCtrl">
+	
+				<!-- Start - .stage -->
+				<div class="stage">
+					<div class="layer login-box" data-depth="0" ng-controller="SessionCtrl">
+						<div class="login-status-box">
+		        			<div class="user-pic">
+		        				<div ng-show="ProfileImage">
+		        					<a href="profile.html"><img src="{{ProfileImage}}" alt=""></a>
+		        				</div>
+		        			</div>
+		        			<div class="user-name">
+		        				<div ng-show="ProfileID"><a href="#" ng-click="logOut()">{{ProfileName}}</a></div>
+		        				<div ng-show="!ProfileID"><a href="#/login">Login</a></div>
+		        			</div>
+		        		</div> 						
+					</div>
+					<div class="layer logo" data-depth="0">
+						<a href="../index.html" class="flower">
+							<img class="bg" src="../img/bg/logo-mini.png" alt="" />
+							<img class="logo" src="../img/generic/danyah-logo-small.png" alt="" />
+						</a>						
+					</div>	
+					<div class="layer" data-depth="0">
+							<img class="img danyah" src="../img/content/danyah-media.png" alt="" />
+					</div>
+					<div class="layer" data-depth="0">
+							<div class="player-wrapper">
+								<div class="player">
+									<iframe width="598" height="359" src="" frameborder="0" allowfullscreen></iframe>							
+								</div>
+							</div>
+					</div>	
+					<div class="layer media-list" data-depth="0">
+						<div class="list-box">
+							<a class="up-arrow" href="#"><img src="../img/generic/up-arrow.png" alt="" /></a>
+							<div class="list-wrapper">
+								{{error}}
+								<ul class="list">
+									<li ng-repeat="item in items">
+										<a href="{{item.Youtube}}">{{item.Title}}</a>
+									</li>
+								</ul>
+							</div>
+							<a class="down-arrow" href="#"><img src="../img/generic/down-arrow.png" alt="" /></a>
+						</div>
+					</div>					
+				</div>
+				<!-- End - .stage -->
+				
+				<!-- Start - .main-nav -->
+        		<nav class="main-nav">
+        			<div class="layer" data-depth="0">
+	        			<a class="video" ng-href="#" ng-click="changeMediaType('video')"><img src="../img/content/danyah-media-video.png" alt="" /></a>
+	        			<a class="audio" ng-href="#" ng-click="changeMediaType('audio')"><img src="../img/content/danyah-media-audio.png" alt="" /></a>
+        			</div>
+        		</nav>
+        		<!-- End - .main-nav -->
+        		
+        	</div>
+        	<!-- End - .inner -->
+        	
+        	<!-- Start - .footer-wrapper -->
+        	<div class="footer-wrapper">
+	        	<footer class="footer">
+	        		<div class="ad-box">
+	        			<a class="advert" href="#"><img src="../img/content/footer-ad-box.jpg" alt="" /></a>
+	        		</div>
+	        		<nav class="footer-nav">
+	        			<a class="powered"><img src="../img/content/al-logo.gif" alt="" /></a>
+	        			<ul>
+		        			<li><a href="#"> عن الموقع </a></li>
+		        			<li><a href="#">  إعلن معنا </a></li>
+		        			<li><a href="#">   إتصل بنا </a></li>
+	        			</ul>
+	        			<p class="copyrights"> جميع الحقوق محفوظة <span>2014 &copy; </span></p>
+	        		</nav>
+	        		<p class="terms"><sup>TM</sup> and &copy; 2014 danyah productions. All rights reserved. Property of danyah.  Use of this website (including any and all parts and components) constitutes your acceptance of these NEW Terms and Conditions and Privacy Policy. The materials on this website are not to be sold, traded or given away. Any copying, manipulation, publishing, or other transfer of these materials, except as specifically provided in the terms and conditions of use, is strictly prohibited.</p>
+	        	</footer>
+        	</div>
+        	<!-- End - .footer-wrapper -->
+        	
+        	<div ng-view></div>        	
+        </div>
+
+		
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="../js/vendor/angular-file-upload.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-route.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-cookies.min.js"></script>
+		<script src="../js/vendor/TweenMax.min.js"></script>
+		<script src="../js/vendor/parallax.js"></script>
+        <script src="../js/plugins.js"></script>
+        <script src="../js/main.js"></script>       
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. 
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+		-->
+    </body>
+</html>

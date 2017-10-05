@@ -1,0 +1,1083 @@
+/*
+======================================================================
+main.css
+----------------------------------------------------------------------
+
+01     -  [ custom fonts include ]
+02     -  [ body font reset ]
+03     -  [ layout styles ]
+04     -  [ parallaxing background layers styles ]
+05     -  [ inner stage styles ]
+06     -  [ footer styles ]
+07     -  [ media queries ]
+08     -  [ danyah landing page specific styles and overrides ]
+09     -  [ danyah media page specific styles and overrides ]
+10     -  [ danyah shop page specific styles and overrides ]
+11     -  [ lightbox styles ] 
+12     -  [ forum styles ] 
+13     -  [ fun styles ] 
+
+======================================================================
+
+
+/*----------------------------------------------------------------------
+01     -  [ custom fonts include ]
+----------------------------------------------------------------------*/
+
+@font-face {
+	font-family: 'brushScript';
+	src: url('../fonts/BrushScriptStd.eot');
+	src: local('☺'), 
+		 url('../fonts/BrushScriptStd.woff') format('woff'), 
+		 url('../fonts/BrushScriptStd.ttf') format('truetype'), 
+		 url('../fonts/BrushScriptStd.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: 'aiAgenda';
+    src: url('../fonts/ai_agenda-webfont.eot');
+    src: url('../fonts/ai_agenda-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/ai_agenda-webfont.woff') format('woff'),
+         url('../fonts/ai_agenda-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LithosProBlack';
+    src: url('../fonts/lithos-pro-black.eot');
+    src: url('../fonts/lithos-pro-black.eot') format('embedded-opentype'),
+         url('../fonts/lithos-pro-black.woff') format('woff'),
+         url('../fonts/lithos-pro-black.ttf') format('truetype'),
+         url('../fonts/lithos-pro-black.svg#LithosProBlack') format('svg');
+}
+
+
+
+/*----------------------------------------------------------------------
+02     -  [ body font reset ]
+----------------------------------------------------------------------*/
+
+html { font-size:16px; }
+body { font:62.5%/1.4 Arial, Helvetica, sans-serif; }
+
+
+/*----------------------------------------------------------------------
+03     -  [ layout styles ]
+----------------------------------------------------------------------*/
+
+html, body {
+	width:100%;
+	height:100%;
+}
+
+body {
+	background:#f8d1dd url('../img/bg/page-tile-flowers.gif');
+}
+
+.master {
+	width:100%;
+	height:100%;
+	min-width:1200px;
+	min-height:768px;
+	position:relative;
+	overflow:hidden;
+}
+
+.inner {
+	width:100%;
+	max-width:1200px;
+	max-height:768px;
+	position:absolute;
+	left:50%;
+	bottom:0;
+	margin-left:-600px;
+}
+
+.progress {
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:999;
+	width:100%;
+	height:100%;
+}
+
+.progress .pinker {
+	background:#f08fc1;
+	opacity:.3;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;	
+}
+
+.progress .message {
+	background:url('../img/generic/progress.gif') no-repeat center center;
+	text-align:center;
+	position:absolute;
+	width:35px;
+	height:35px;
+	top:50%;
+	left:50%;
+	margin-left:-17px;
+	margin-top:-17px;
+	
+}
+
+/*----------------------------------------------------------------------
+04     -  [ parallaxing background layers styles ]
+----------------------------------------------------------------------*/
+
+.parallax-bg {
+	width:100%;
+	height:100%;
+	
+}
+.parallax-bg .layer  {
+	width:100%;	
+	height:100%;
+}
+
+.parallax-bg .layer > img {
+	position:absolute;
+	left:50%;
+	bottom:-200px;
+	margin-left:-1507px;
+}
+
+.parallax-bg .layer.hills > img,
+.parallax-bg .layer.home-hearts > img {
+	bottom:-190px;
+}
+
+.parallax-bg .layer.home-logo .flower {
+	width:1200px;
+	left:50%;
+	margin-left:-600px;
+	bottom:300px;
+	position:absolute;
+}
+
+.parallax-bg .layer.home-logo .flower .bg,
+.parallax-bg .layer.home-logo .flower .logo {
+	position:absolute;
+	left:20px;
+}
+
+.parallax-bg .layer.home-logo .flower .logo {
+	position:relative;
+}
+
+
+/*----------------------------------------------------------------------
+05     -  [ inner stage styles ]
+----------------------------------------------------------------------*/
+
+.stage {
+	width:100%;
+	position:absolute;
+	bottom:180px;
+	left:0;
+}
+
+.stage .layer {
+	bottom:0;
+}
+
+.home-page .stage .layer {
+	width:100%;
+}
+
+.stage .layer .img {
+	position:absolute;
+	left:0;
+	bottom:0;
+}
+
+.stage .layer.ellipse .img {
+	left:430px;
+	bottom:0;
+}
+
+.stage .layer .father {
+	left:520px;
+	bottom:25px;
+}
+
+.stage .layer .mother {
+	left:690px;
+	bottom:25px;
+}
+
+.stage .layer .danyah {
+	left:450px;
+	bottom:20px;
+}
+
+.stage .layer .azuz {
+	left:690px;
+	bottom:16px;
+}
+
+.stage .layer > .danyah img,
+.stage .layer > .azuz img {
+	width:90%;
+}
+
+.stage .scale .speech-bubble {
+	direction:rtl;
+	color:#cc3399;
+	font-family:'aiAgenda',tahoma;
+	font-size:22px;
+	display:none;
+	position:absolute;
+	width:209px;
+	height:94px;
+	padding:35px 50px 10px 20px;
+}
+
+.stage .danyah .speech-bubble {
+	background:url('../img/bg/danyah-speech-bubble.png') no-repeat left top;
+	bottom:310px;
+	left:-225px;
+}
+
+.stage .azuz .speech-bubble {
+	color:#3399cc;
+	background:url('../img/bg/azuz-speech-bubble.png') no-repeat left top;
+	bottom:215px;
+	right:-255px;
+	padding-top:30px;
+	height:99px;
+}
+
+
+/*
+ .login-status-box styles
+ * */
+
+.stage .layer.login-box {
+	width:100%;
+}
+
+.stage .login-status-box {
+	background:transparent url('../img/bg/login-status-box.png') no-repeat top left;
+	width:136px;
+	height:176px;
+	position:absolute;
+	bottom:400px;
+	right:40px;
+}
+
+.stage .login-status-box .user-pic {
+	margin-left:32px;
+	margin-top:7px;
+	width:97px;
+	height:105px;
+	overflow:hidden;
+	border-radius:12px;
+}
+
+.stage .login-status-box .user-pic img {
+	border-radius:12px;
+	height:100%;
+}
+
+.stage .login-status-box .user-name {
+	color:#fff;
+	font-family:'brushScript',arial, helvetica,sans-serif;
+	font-size:25px;
+	line-height:1.2;
+	background:#cc3399;
+	width:97px;
+	border-radius:12px;
+	text-align:center;
+	margin-left:25px;
+	border:6px solid #fff;
+}
+
+.stage .login-status-box .user-name a{
+	color:#fff;
+	text-decoration:none;
+}
+
+
+/*
+ .main-nav styles
+ * */
+	
+.main-nav {
+	height:250px;
+	position:absolute;
+	bottom:0;
+	left:0;
+}
+
+.main-nav a {
+	position:absolute;
+	display:block;
+	width:240px;
+}
+
+.main-nav a img {
+	width:100%;
+}
+
+.main-nav .store {
+	left:60px;
+}
+
+.main-nav .game {
+	left:320px;
+}
+
+.main-nav .chat {
+	left:790px;
+}
+
+.main-nav .media {
+	left:1010px;
+}
+
+.main-nav .video {
+	left:320px;
+}
+
+.main-nav .audio {
+	left:680px;
+}
+
+/*----------------------------------------------------------------------
+06     -  [ footer styles ]
+----------------------------------------------------------------------*/
+
+.footer-wrapper {
+	width:100%;
+	background:transparent url('../img/bg/footer.png') no-repeat center top;
+	position:absolute;
+	left:0;
+	bottom:-30px;
+	padding-top:120px;
+}
+
+.footer {
+	text-align:center;
+	width:1200px;
+	height:280px;
+	margin:0 auto;
+}
+
+.footer .ad-box {
+	text-align:center;
+}
+
+.footer .ad-box .advert {
+	display:inline-block;
+}
+
+.footer .footer-nav ul,
+.footer .footer-nav li,
+.footer .footer-nav a {
+	display:inline-block;
+}
+
+.footer .footer-nav {
+	direction:rtl;
+	font-family:'aiAgenda',tahoma;
+	font-size:16px;
+	color:#eb76aa;
+	margin-top:45px;
+}
+
+.footer .footer-nav li {
+	content:'/';
+}
+
+.footer .footer-nav li:before {
+	content:'/';
+	padding:0 5px 0 8px;
+}
+
+.footer .footer-nav li:first-child:before {
+	content:'';
+	padding-right:0;
+}
+
+.footer .footer-nav .powered {
+	float:left;
+	margin-left:30px;
+}
+
+.footer .footer-nav .copyrights {
+	float:right;
+	margin-right:30px;
+}
+
+.footer .footer-nav .copyrights span {
+	direction:ltr;
+}
+
+.footer .footer-nav a {
+	color:#eb76aa;
+	text-decoration:none;
+}
+
+.footer .footer-nav a:hover {
+	color:#b74ca1;
+}
+
+.footer .terms {
+	color:#ea6ea5;
+	direction:rtl;
+	display:block;
+	margin-top:30px;
+	font-size:12px;
+	padding:0 30px;
+}
+
+
+
+/*----------------------------------------------------------------------
+07     -  [ media queries ]
+----------------------------------------------------------------------*/
+
+@media screen and (max-width:1200px) {
+	
+	.home .logo-bg,
+	.home .inner {	
+		left:0;
+		margin-left:0;
+	}
+	
+	
+}
+
+@media screen and (min-height:800px) {
+	
+	.parallax-bg,
+	.inner {
+		bottom:5%;
+	}
+	
+}
+
+
+/*----------------------------------------------------------------------
+08     -  [ danyah landing page specific styles and overrides ]
+----------------------------------------------------------------------*/
+
+.danyah-page {
+	background: #fea9ed; /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZlYTllZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  #fea9ed 0%, #ffffff 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fea9ed), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #fea9ed 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #fea9ed 0%,#ffffff 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #fea9ed 0%,#ffffff 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #fea9ed 0%,#ffffff 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fea9ed', endColorstr='#ffffff',GradientType=0 ); /* IE6-8 */
+}
+
+.danyah-page .master {
+	background:url(../img/bg/page-tile-hearts.png) repeat 0 0;
+}
+
+.danyah-page .stage {
+	bottom:160px;
+}
+
+.danyah-page .logo a {
+	position:absolute;
+	width:317px;
+	height:315px;
+	bottom:200px;
+	left:60px;
+}
+
+.danyah-page .logo img {
+	position:absolute;
+}
+
+
+/*----------------------------------------------------------------------
+09     -  [ danyah media page specific styles and overrides 
+----------------------------------------------------------------------*/
+
+.danyah-page.media {
+	background:#f8d1dd url('../img/bg/page-tile-flowers.gif');
+}
+
+.danyah-page.media .master {
+	background:none;
+}
+
+.danyah-page.media .logo a {
+	width:221px;
+	height:224px;
+	bottom:370px;
+	left:10px;
+}
+
+.danyah-page.media .danyah {
+	left:90px;
+}
+
+.stage .player-wrapper {
+	position:absolute;
+	background:url('../img/bg/screen.png') no-repeat 0 0;	
+	width:666px;
+	height:557px;
+	bottom:30px;
+	left:280px;
+}
+
+.stage .player {
+	margin-top:72px;
+	margin-left:32px;
+}
+
+.media-list {
+	width:100%;
+}
+
+.stage .list-box {
+	background:url('../img/bg/media-list-box.png') no-repeat 0 0;
+	width:179px;
+	height:263px;
+	position:absolute;
+	right:30px;
+	bottom:30px;
+	text-align:center;
+}
+
+.stage .list-box {
+	padding-top:15px;
+}
+
+.stage .list-box .up-arrow,
+.stage .list-box .down-arrow {
+	position:absolute;
+	left:50%;
+	margin-left:-18px;
+}
+
+.stage .list-wrapper {
+	margin-left:15px;
+	margin-top:35px;
+	height:160px;
+	overflow:hidden;
+}
+
+.stage .list-box li {
+	margin-bottom:8px;
+}
+
+.stage .list-box li a {
+	color:#373858;
+	font-family:'aiAgenda',arial,sans-serif;
+	font-size:16px;
+	text-decoration:none;
+	text-align:right;
+	line-height:1;
+	background:#fff;
+	display:block;
+	width:110px;
+	border-radius:14px;
+	padding:5px 35px 2px 5px;
+	position:relative;
+	overflow:hidden;
+}
+
+.stage .list-box a span {
+	background:#cf4b9f;
+	width:30px;
+	height:18px;
+	right:3px;
+	top:3px;
+	border-radius:14px;	
+	position:absolute;
+}
+
+.stage .list-box a:hover span,
+.stage .list-box a.active span {
+	background:#7b5aaa;
+}
+
+.danyah-page.media .main-nav {
+	bottom:40px;
+}
+
+
+/*----------------------------------------------------------------------
+10     -  [ danyah shop page specific styles and overrides ]
+----------------------------------------------------------------------*/
+
+.stage .carousel-box-bg {
+	background:url('../img/bg/product-carousel.png') no-repeat 0 0;
+	width:836px;
+	height:488px;
+	position:absolute;
+	left:170px;
+	bottom:15px;
+}
+
+.stage .carousel-box {
+	width:836px;
+	height:488px;
+	position:absolute;
+	left:170px;
+	bottom:15px;
+}
+
+.carousel-box .carousel-wrapper {
+	width:640px;
+	margin-top:45px;
+	padding-left:87px;
+	padding-right:87px;
+	overflow:hidden;
+}
+.carousel-box .carousel {
+	height:300px;
+}
+
+.carousel-box .product {
+	font-family:'aiAgenda',arial,helvetica;
+	color:#fff;	
+	position:relative;
+	display:inline-block;
+	width:169px;
+	height:230px;
+	padding:70px 0 0 0;
+	margin:0 20px;
+	direction:rtl;
+}
+
+.carousel-box .product .shot {
+	display:block;
+	text-decoration:none;
+	color:#fff;
+}
+
+.carousel-box .product .shot img {
+	width:100%;
+}
+
+.carousel-box .product .info,
+.carousel-box .product .price {
+	color:#fff;
+	text-decoration:none;
+	display:inline-block;
+	position:absolute;
+}
+
+.carousel-box .product .info {
+	font-size:24px;
+	line-height:1.2;
+	width:115px;
+	height:70px;
+	padding:13px 10px 10px 10px;
+	text-align:center;
+	top:0;
+	left:0;
+}
+
+.carousel-box .product.girl .info {
+	background:url('../img/product/danyah-product-info.png') no-repeat 0 0;
+}
+
+.carousel-box .product.boy .info {
+	background:url('../img/product/azuz-product-info.png') no-repeat 0 0;
+}
+
+.carousel-box .product .price {
+	font-size:18px;
+	height:35px;
+	padding:13px 20px 0 60px;
+	border-radius:22px;
+	bottom:0;
+	left:0;
+}
+
+.carousel-box .product.girl .price {
+	background:#ef8dc0 url('../img/product/danyah-add.png') no-repeat 0 0;
+}
+
+.carousel-box .product.boy .price {
+	background:#65b9f5 url('../img/product/azuz-add.png') no-repeat 0 0;
+}
+
+.owl-controls .owl-buttons .owl-prev,
+.owl-controls .owl-buttons .owl-next {
+	position:absolute;
+	width:40px;
+	height:53px;
+	top:50%;
+	margin-top:-26px;
+}
+
+.owl-controls .owl-buttons .owl-prev {
+	background:url('../img/product/arrow-left.png') no-repeat 0 0;
+	left:-45px;
+}
+
+.owl-controls .owl-buttons .owl-next {
+	background:url('../img/product/arrow-right.png') no-repeat 0 0;
+	right:-45px;
+}
+
+.stage .img.danyah-shop {
+	left:870px;
+	bottom:-200px;
+}
+
+.stage .img.azuz-shop {
+	left:30px;
+	bottom:-120px;
+}
+
+.stage .checkout {
+	background:url('../img/bg/checkout.png') no-repeat 0 0;
+	position:absolute;
+	left:450px;
+	bottom:-40px;
+	direction:rtl;
+	display:table-cell;
+	vertical-align:middle;
+}
+
+.stage .checkout a {
+	font-family:'aiAgenda',tahoma,helvetica;
+	font-size:30px;
+	text-decoration:none;
+	width:307px;
+	height:77px;	
+	color:#cf4b9f;
+	display:block;
+	padding-right:25px;
+}
+
+.stage .checkout span {
+	margin-top:18px;
+}
+
+.stage .checkout .text {
+	float:right;
+	margin-right:30px;
+}
+
+.stage .checkout .num {
+	float:left;
+	margin-top:20px;
+	margin-left:30px;
+}
+
+
+/*----------------------------------------------------------------------
+11     -  [ lightbox styles ] 
+----------------------------------------------------------------------*/
+
+.lightbox {
+	width:100%;
+	height:100%;
+	position:fixed;
+	top:0;
+	left:0;
+	text-align:center;
+}
+
+.lightbox .lbwindow {
+	width:1050px;
+	height:540px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-left:-525px;
+	margin-top:-270px;
+	border-radius:20px;
+	border:5px solid #ff74c3;
+	text-align:left;
+}
+
+.lbwindow .underlay {
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	background:#f7e0e9;
+	border-radius:20px;	
+	opacity:.8;
+}
+
+.lbwindow .wborder {
+	border:10px solid #fff;
+	border-radius:14px;
+	position:relative;
+	height:520px;
+}
+
+.lbwindow .pborder {
+	border:10px solid #b74ca1;
+	border-radius:3px;
+	position:relative;
+	height:500px;
+}
+
+.lbwindow .btn-close {
+	position:absolute;
+	top:-40px;
+	right:-40px;
+}
+
+.lbwindow .product-preview {
+	position:relative;
+	margin-top:30px;
+	text-align:center;
+}
+
+.lbwindow .product-preview img {
+	border:2px solid #fff;	
+	display:inline-block;
+}
+
+.lbwindow .btn-add-cart {
+	position:relative;
+	text-align:center;
+	margin-top:10px;
+}
+
+.lbwindow .btn-add-cart a {
+	font-family:'aiAgenda',tahoma;
+	background:url('../img/bg/btn-add-cart.png') no-repeat 0 0;
+	display:inline-block;
+	width:301px;
+	height:57px;
+	font-size:30px;
+	padding-top:12px;
+	color:#fff;
+	text-decoration:none;
+}
+
+.form-window {
+	background:url('../img/bg/form01-top.png') no-repeat center top;
+	margin-top:50px;
+	display:inline-block;
+	vertical-align:middle;
+	padding-top:95px;
+	position:relative;
+}
+
+.form-window .form {
+	background:url('../img/bg/form01-bottom.png') no-repeat center bottom;
+	width:500px;
+	min-height:300px;	
+}
+
+.form-window .title {
+	font-size:40px;
+	color:#fff;
+	font-family:'aiAgenda', tahoma;
+	position:absolute;
+	top:30px;
+	width:100%;
+	text-align:center;
+}
+
+.form-window .btn-close {
+	position:absolute;
+	top:-8px;
+	left:-15px;
+}
+
+.form-window .form-fields {
+	padding:20px 30px;
+	direction:rtl;
+}
+
+.form-window .row {
+	margin-bottom:10px;
+}
+.form-window .label,
+.form-window .field {
+	display:inline-block;
+	vertical-align:middle;
+}
+
+.form-window .label {
+	font-family:'aiAgenda',tahoma;
+	font-size:24px;
+	color:#7e9098;
+	min-width:140px;
+	text-align:right;
+}
+
+.form-window .field {
+	background:#fff;
+	width:280px;
+	height:45px;
+	border-radius:20px;
+	position:relative;
+}
+
+.form-window .field .txt {
+	color:#666;
+	font-size:18px;
+	font-family:'aiAgenda',tahoma;
+	margin-top:4px;
+	height:35px;
+	width:250px;
+}
+
+.form-window .field .email {
+	direction:ltr;
+	margin-left:20px;
+	width:230px;
+}
+
+.form-window .field .sel {
+	color:#666;
+	font-size:18px;
+	font-family:'aiAgenda',tahoma;
+	margin-top:4px;
+	height:35px;
+	width:250px;	
+}
+
+.select-wrapper {
+	position:relative;
+}
+
+.select-wrapper:before {
+	content:' ';
+	display:block;
+	background:url('../img/generic/select-arrow.gif') no-repeat 0 0;
+	position:absolute;
+	top:1px;
+	left:14px;
+	width:25px;
+	height:39px;
+	z-index:9;
+	pointer-events:none;
+}
+
+.form-window .btn-submit {
+	color:#fff;
+	font-size:30px;
+	font-family:'aiAgenda',tahoma;	
+	background:#88b3c5;
+	border-radius:20px;
+	width:250px;
+	margin:15px 0;
+}
+
+.form-window .help-block {
+	color:red;
+	font-family:'aiAgenda',tahoma;
+	font-size:14px;
+	text-align:right;
+	padding-right:160px;
+	display:block;
+	padding-top:5px;
+	margin-bottom:5px;
+}
+
+.form-window .icon-busy {
+	position:absolute;
+	left:10px;
+	top:10px;
+}
+
+.form-window p {
+	color:#7e9098;
+	font-family:'aiAgenda',tahoma;
+	font-size:20px;	
+	padding-bottom:10px;
+}
+
+.form-window p a {
+	color:#f06eaa;
+}
+
+.form-window .field.dob {
+	text-align:right;
+}
+
+.form-window .field.dob .tiny {
+	display:inline-block;	
+	width:80px;
+	padding-right:10px;
+}
+
+.form-window .field.dob .tiny.month {
+	padding-right:0;
+}
+
+
+.form-window .field.dob .select-wrapper {
+	display:inline-block;
+}
+
+.form-window .field.dob .tiny select {
+	width:100%;
+}
+
+.form-window .field.dob .select-wrapper:before {
+	left:0;	
+}
+
+.form-window .error {
+	color:red;
+}
+
+.form-window .profile-pic {
+	width:150px;
+	height:170px;
+	background:url('../img/bg/settings-thumb.jpg') no-repeat center center;
+	border-radius:15px;
+	margin:0 auto 10px auto;
+	overflow:hidden;
+	cursor:pointer;
+}
+
+.form-window .profile-pic img {
+	height:100%;
+}
+
+/*----------------------------------------------------------------------
+12     -  [ forum styles ] 
+----------------------------------------------------------------------*/
+
+.layer .forum-frame {
+	background:url('../img/bg/forum.png') no-repeat 0 0;
+	width:831px;
+	height:733px;
+	position:absolute;
+	bottom:-175px;
+	left:185px;
+}
+
+.forum-frame .speech-bubble {
+	font-family:'aiAgenda',tahoma;
+	font-size:18px;
+	color:#b74ca1;
+	direction:rtl;
+	background:url('../img/bg/speech-bubble-forum.png') no-repeat 0 0;
+	width:270px;
+	height:73px;
+	padding:25px 98px 0 20px;
+	position:absolute;
+	top:40px;
+	left:170px;
+}
+
+
+/*----------------------------------------------------------------------
+13     -  [ fun styles ] 
+----------------------------------------------------------------------*/
+
+
