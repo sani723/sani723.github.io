@@ -8,15 +8,15 @@
         <title>Welcome to Danyah Website</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=1400">
-        
+
         <!-- HandheldFriendly, MobileOptimized, viewport meta is required for responsive & mobile templates -->
-        <!-- 
+        <!--
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
         <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
         -->
         <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
-		
+
 		<!-- build:js css/all.css -->
         <link rel="stylesheet" href="../css/normalize_custom.css">
         <link rel="stylesheet" href="../css/main.css">
@@ -25,7 +25,7 @@
 		<!-- build:js js/modernizr-2.6.2.min.js -->
         <script src="../js/vendor/modernizr-2.6.2.min.js"></script>
 		<script src="../js/vendor/angular-file-upload-shim.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>        
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
 		<!-- endbuild -->
     </head>
     <body class="danyah-page media">
@@ -41,10 +41,10 @@
 				<div class="layer " data-depth="0.2"><img src="../img/bg/home-ground.png" alt="" /></div>
 			</div>
 			<!-- End - parallax-bg -->
-			
+
 			<!-- Start - .inner -->
         	<div class="inner" ng-controller="MediaCtrl">
-	
+
 				<!-- Start - .stage -->
 				<div class="stage">
 					<div class="layer login-box" data-depth="0" ng-controller="SessionCtrl">
@@ -58,24 +58,24 @@
 		        				<div ng-show="ProfileID"><a href="#" ng-click="logOut()">{{ProfileName}}</a></div>
 		        				<div ng-show="!ProfileID"><a href="#/login">Login</a></div>
 		        			</div>
-		        		</div> 						
+		        		</div>
 					</div>
 					<div class="layer logo" data-depth="0">
 						<a href="../index.html" class="flower">
 							<img class="bg" src="../img/bg/logo-mini.png" alt="" />
 							<img class="logo" src="../img/generic/danyah-logo-small.png" alt="" />
-						</a>						
-					</div>	
+						</a>
+					</div>
 					<div class="layer" data-depth="0">
 							<img class="img danyah" src="../img/content/danyah-media.png" alt="" />
 					</div>
 					<div class="layer" data-depth="0">
 							<div class="player-wrapper">
 								<div class="player">
-									<iframe width="598" height="359" src="" frameborder="0" allowfullscreen></iframe>							
+									<iframe width="598" height="359" src="" frameborder="0" allowfullscreen></iframe>
 								</div>
 							</div>
-					</div>	
+					</div>
 					<div class="layer media-list" data-depth="0">
 						<div class="list-box">
 							<a class="up-arrow" href="#"><img src="../img/generic/up-arrow.png" alt="" /></a>
@@ -89,10 +89,10 @@
 							</div>
 							<a class="down-arrow" href="#"><img src="../img/generic/down-arrow.png" alt="" /></a>
 						</div>
-					</div>					
+					</div>
 				</div>
 				<!-- End - .stage -->
-				
+
 				<!-- Start - .main-nav -->
         		<nav class="main-nav">
         			<div class="layer" data-depth="0">
@@ -101,10 +101,10 @@
         			</div>
         		</nav>
         		<!-- End - .main-nav -->
-        		
+
         	</div>
         	<!-- End - .inner -->
-        	
+
         	<!-- Start - .footer-wrapper -->
         	<div class="footer-wrapper">
 	        	<footer class="footer">
@@ -124,20 +124,20 @@
 	        	</footer>
         	</div>
         	<!-- End - .footer-wrapper -->
-        	
-        	<div ng-view></div>        	
+
+        	<div ng-view></div>
         </div>
 
-		
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="../js/vendor/angular-file-upload.min.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-route.min.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-cookies.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-route.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-cookies.min.js"></script>
 		<script src="../js/vendor/TweenMax.min.js"></script>
 		<script src="../js/vendor/parallax.js"></script>
         <script src="../js/plugins.js"></script>
-        <script src="../js/main.js"></script>       
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. 
+        <script src="../js/main.js"></script>
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
